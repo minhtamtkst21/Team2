@@ -1,0 +1,82 @@
+﻿@model IEnumerable<Team2.Models.FOOD>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title">DataTable with default features</h3>
+    </div>
+    <!-- /.card-header -->
+    <div class="card-body">
+        <table id="example1" class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>
+                        FOOD_CODE
+                    </th>
+                    <th>
+                        FOOD_NAME
+                    </th>
+                    <th>
+                        DESCRIPTION
+                    </th>
+                    <th>
+                        PRICE
+                    </th>
+                    <th>
+                        IMAGE
+                    </th>
+                    <th>
+                        STATUS
+                    </th>
+                    <th>
+                        CATEGORY_NAME
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @item.FOOD_CODE
+                        </td>
+                        <td>
+                            <a href="@Url.Action("Details", new { item.ID })">@item.FOOD_NAME</a>
+                        </td>
+                        <td>
+                            @item.DESCRIPTION
+                        </td>
+                        <td>
+                            @item.PRICE
+                        </td>
+                        <td>
+                            <img src="@Url.Action("Image", new { item.ID })" width="50px" height="50px" />
+                        </td>
+                        <td>
+                            @item.STATUS
+                        </td>
+                        <td>
+                            @item.CATEGORY.CATEGORY_NAME
+                        </td>
+                        <td>
+                            @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                            @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                        </td>
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+    </div>
+    <!-- /.card-body -->
+</div>

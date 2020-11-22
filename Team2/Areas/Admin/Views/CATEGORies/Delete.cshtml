@@ -13,7 +13,7 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.CATEGORY_CODE)
+            CATEGORY_CODE
         </dt>
 
         <dd>
@@ -21,23 +21,20 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.CATEGORY_NAME)
+            CATEGORY_NAME
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.CATEGORY_NAME)
         </dd>
-
         <dt>
-            @Html.DisplayNameFor(model => model.IMAGE_URL)
+            Picture
         </dt>
-
         <dd>
-            @Html.DisplayFor(model => model.IMAGE_URL)
+            <img src="@Url.Action("Image", new { Model.ID })" />
         </dd>
-
         <dt>
-            @Html.DisplayNameFor(model => model.STATUS)
+            STATUS
         </dt>
 
         <dd>
