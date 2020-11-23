@@ -63,7 +63,10 @@
                 </td>
             }
             else
-            {<td>Hết hàng</td>}
+            {
+                <td>
+                    Hết hàng
+                </td>}
         </dd>
 
         <dt>
@@ -71,7 +74,7 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.CATEGORY.CATEGORY_CODE)
+            @Html.DisplayFor(model => model.CATEGORY.CATEGORY_NAME)
         </dd>
 
     </dl>
