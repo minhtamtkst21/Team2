@@ -30,11 +30,11 @@
         </div>
     </div>
     <div class="form-group">
-        @Html.LabelFor(model => model.STATUS, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
+            @Html.Label("Còn hàng", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="checkbox">
                 @Html.EditorFor(model => model.STATUS)
-                @Html.ValidationMessageFor(model => model.STATUS, "", new { @class = "text-danger" })
+                @Html.ValidationMessageFor(model => model.STATUS, "", new { @class = "text-danger col-md-2" })
             </div>
         </div>
     </div>

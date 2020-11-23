@@ -173,6 +173,7 @@
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\CATEGORiesController.cs" />
     <Compile Include="Areas\Admin\Controllers\FOODsController.cs" />
+    <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -259,6 +260,7 @@
     <Content Include="Areas\Admin\Views\FOODs\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\FOODs\Index.cshtml" />
     <Content Include="Areas\Admin\Views\FOODs\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Home\Index.cshtml" />
     <None Include="Images\Categories\4" />
     <None Include="Images\Categories\1" />
     <None Include="Images\Categories\2" />
