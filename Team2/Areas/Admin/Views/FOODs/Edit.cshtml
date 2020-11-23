@@ -20,7 +20,7 @@
     <div class="form-group">
         @Html.LabelFor(model => model.FOOD_CODE, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
-            @Html.EditorFor(model => model.FOOD_CODE, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.EditorFor(model => model.FOOD_CODE, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" }})
             @Html.ValidationMessageFor(model => model.FOOD_CODE, "", new { @class = "text-danger" })
         </div>
     </div>
