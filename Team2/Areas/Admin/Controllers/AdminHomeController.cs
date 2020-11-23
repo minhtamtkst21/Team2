@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace Team2.Areas.Admin.Controllers
 {
-    public class HomeController : Controller
+    public class AdminHomeController : Controller
     {
         // GET: Admin/Home
         public ActionResult Index()

@@ -28,11 +28,11 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.IMAGE_URL)
+            IMAGE
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.IMAGE_URL)
+            <img id="Picture" width="200" height="200" src="@Url.Action("Image", new { Model.ID })" />
         </dd>
 
         <dt>
@@ -40,7 +40,14 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.STATUS)
+            @if (Model.STATUS == true)
+            {
+                <td>
+                    Còn hàng
+                </td>
+            }
+            else
+            {<td>Hết hàng</td>}
         </dd>
 
     </dl>
