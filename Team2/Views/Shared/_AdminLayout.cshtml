@@ -71,7 +71,7 @@
                         <img src="~/Images/Background.png" class="img-circle elevation-2" alt="User Image">
                     </div>
                     <div class="info">
-                        <a href="#" class="d-block">Team2</a>
+                        <a href="#" class="d-block">Hello @Session["user-fullname"]</a>
                     </div>
                 </div>
 
@@ -79,7 +79,7 @@
                 <nav class="mt-2">
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                         <!-- Add icons to the links using the .nav-icon class
-                             with font-awesome or any other icon font library -->
+         with font-awesome or any other icon font library -->
                         <li class="nav-item has-treeview">
                             <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
@@ -117,27 +117,37 @@
                                     <i class="fas fa-angle-left right"></i>
                                 </p>
                             </a>
-                            <ul class="nav nav-treeview">
+                        <ul class="nav nav-treeview">
+                            @if ((int)Session["user-role"] == 2)
+                            {
                                 <li class="nav-item">
-                                    <a href="@Url.Action("Index","FOODs")" class="nav-link">
+                                    <a href="@Url.Action("Index", "FOODs")" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Foods</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="@Url.Action("Index","CATEGORies")" class="nav-link">
+                                    <a href="@Url.Action("Index", "CATEGORies")" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Categories</p>
                                     </a>
                                 </li>
+                            }
                                 <li class="nav-item">
-                                    <a href="@Url.Action("Index","CATEGORies")" class="nav-link">
+                                    <a href="@Url.Action("Index", "CATEGORies")" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Customers</p>
                                     </a>
                                 </li>
-                            </ul>
+                        </ul>
                         </li>
+                        <a href="@Url.Action("Logout","Auth")" class="nav-link">
+                            <i class="nav-icon fas fa-sign-out-alt"></i>
+                            <p>
+                                Logout
+                                <i class="right fas fa-angle-left"></i>
+                            </p>
+                        </a>
                     </ul>
                 </nav>
                 <!-- /.sidebar-menu -->
